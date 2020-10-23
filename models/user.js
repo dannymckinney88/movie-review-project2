@@ -37,7 +37,7 @@ module.exports = (sequelize, DataTypes) => {
         }
       }
     },
-    name: {
+    username: {
       type: DataTypes.STRING,
       validate: {
         len: {
