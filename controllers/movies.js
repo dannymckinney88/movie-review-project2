@@ -7,17 +7,28 @@ const axios = require('axios')
 const router = express.Router()
 
 //middleware
-app.use(express.urlencoded({ extended: false }));
+router.use(express.urlencoded({ extended: false }));
 
 // variables 
-const apiKey = process.env.effaabb70719da90c304ab5e986eb29f
+const apiKey = process.env.KEY
 
 
 // route for displaying resluts of movies search
 router.get('/', (req,res) => {
-    
 
-    res.render('movieSearchResults')
+    console.log(apiKey)
+    const movieSeach = req.query.movies
+    const qs = {
+        params:{
+            api_key: apiKey
+        }
+    }
+
+    axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieSeach}&page=1`)
+        .then(movies =>{
+            console.log(movies.data)
+        })
+    res.send('We are in movies')
 })
 
 // GET route for displaying single movie with info
