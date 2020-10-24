@@ -19,10 +19,4 @@ router.get('/new', (req,res) =>{
 
 })
 
-
-// post route for comments 
-router.post('/:id/comment', (req,res) =>{
-    res.redirect('/:id')
-})
-
 module.exports = router
