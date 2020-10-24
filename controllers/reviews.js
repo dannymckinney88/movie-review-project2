@@ -1,5 +1,7 @@
 const express = require('express')
 const db = require('../models')
+const passport = require('../config/ppConfig');
+
 
 const router = express.Router()
 
