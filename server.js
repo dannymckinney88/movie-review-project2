@@ -43,6 +43,7 @@ app.get('/profile', isLoggedIn, (req, res) => {
 app.use('/auth', require('./controllers/auth'));
 app.use('/reviews', require('./controllers/reviews'));
 app.use('/movies', require('./controllers/movies'));
+app.use('/favorites', require('./controllers/favorites'));
 
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`🎧You're listening to the smooth sounds of port ${process.env.PORT || 3000}🎧`));
 

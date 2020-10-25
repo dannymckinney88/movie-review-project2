@@ -6,8 +6,13 @@
             <div class="col d-flex" >
                 <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
                 <div class="d-flex flex-column justify-content-around">
+                  <div class="d-flex justify-content-between">
                     <h3 class=""><a href="/movies/info/<%= movie.id %> "><%= movie.title %></a> </h3>
-                    <p class= "movie-search-overview"> <%= movie.overview %>  </p>
+                    <form action="/favorites" method="POST">
+                      <button type="submit">favorites</button>
+                    </form>
+                  </div>
+                  <p class= "movie-search-overview"> <%= movie.overview %>  </p>
                 </div>
             </div>
         </div>
