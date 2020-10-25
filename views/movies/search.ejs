@@ -1,0 +1,22 @@
+<!-- diplay all moveis from search and display to correct amount of pages -->
+<% movies.forEach(movie =>{ %> 
+    <h1><%= movie.title %> </h1>
+    <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
+    <p class= "movie-search-overview"> <%= movie.overview %>  </p>
+<% }) %> 
+
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+      <% for(let i =0 ; i < pages; i++) {%> 
+        <!-- <a class="page-link" href=<%=// `/movies/${i+1} ` %>> <%= i+1 %> </a> -->
+      <li class="page-item">
+          <form action="/movies/<%= i+1 %> ">
+            <input hidden type="text" name="page" value=<%= `${i+1}` %>>
+            <input hidden type="text" name="movies" value="<%= movieSearch  %>" >
+        
+            <button><%= `${i+1}` %></button>
+          </form>
+     </li>
+      <% } %> 
+    </ul>
+  </nav>
