@@ -1,9 +1,23 @@
+body {
+  background-color: goldenrod;
+}
+
+form {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: center;
+}
+
+
 nav ul li {
   text-decoration: none;
   display: inline-block;
   margin-right: .3em;
+  text-align: center;
 }
 
 h1 {
-  color: chartreuse;
+  color: rgb(0, 174, 255);
+  text-align: center;
 }
