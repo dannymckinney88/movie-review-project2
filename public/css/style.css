@@ -31,6 +31,7 @@ h1 {
   height: 200px;
 }
 
+<<<<<<< HEAD
 /* .movie-search-overview{
   position: relative;
   display: inline;
@@ -51,3 +52,19 @@ div {
   overflow-y: hidden;
   transition: height .5 linear;
 } */
+=======
+.search-container{
+  border:1px solid lightgrey;
+  margin-top: 10px;
+}
+
+.info-img{
+  height: 400px;
+}
+
+.search-bar{
+  width: 55vw;
+  padding: 6px 2px;
+  border: 1px solid lightgray;
+}
+>>>>>>> submain

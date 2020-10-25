@@ -1,0 +1,13 @@
+<div class="container">
+    <div class="d-flex">
+        <img class="info-img" src="<%= `https://image.tmdb.org/t/p/w500/${info.poster_path}` %>" alt="">
+        <div class="d-flex flex-column">
+            <h2><%= info.title %> </h2>
+            <div class ="d-flex">
+                <p> <%= info.release_date %>  (<%= info.production_companies[1].origin_country %>) </p>
+            </div>
+        </div>
+    </div>
+
+
+</div>
