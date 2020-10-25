@@ -9,6 +9,7 @@
                   <div class="d-flex justify-content-between">
                     <h3 class=""><a href="/movies/info/<%= movie.id %> "><%= movie.title %></a> </h3>
                     <form action="/favorites" method="POST">
+                      <input hidden type="text" name="movieId" value="<%= movie.id %> ">
                       <button type="submit">favorites</button>
                     </form>
                   </div>

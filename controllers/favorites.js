@@ -10,12 +10,14 @@ router.use(methodOverride('_method'))
 //Display a list of the users favorites 
 router.get('/', (req, res) =>{
 
-    res.render('favorites')
+    res.render('movies/favorites')
 })
 
 // Add a movie to the a users favorties list
 router.post('/', (req,res) =>{
-    console.log(req.user)
+    console.log(req.user.dataValues.id)
+    console.log(req.body.movieId)
+    // redirect 
     res.redirect('/favorites')
 })
 
