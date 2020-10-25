@@ -12,6 +12,10 @@ h1 {
   height: 200px;
 }
 
+.search-container{
+  border:1px solid lightgrey;
+  margin-top: 10px;
+}
 /* .movie-search-overview{
   position: relative;
   display: inline;
