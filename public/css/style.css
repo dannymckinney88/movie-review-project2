@@ -12,9 +12,17 @@ h1 {
   height: 200px;
 }
 
-/* .movie-search-overview{
-  position: relative;
-  display: inline;
-  bottom: 20px;
-} */
-        
+.search-container{
+  border:1px solid lightgrey;
+  margin-top: 10px;
+}
+
+.info-img{
+  height: 400px;
+}
+
+.search-bar{
+  width: 55vw;
+  padding: 6px 2px;
+  border: 1px solid lightgray;
+}

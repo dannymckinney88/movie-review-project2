@@ -1,22 +1,47 @@
 <!-- diplay all moveis from search and display to correct amount of pages -->
-<% movies.forEach(movie =>{ %> 
-    <h1><%= movie.title %> </h1>
-    <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
-    <p class= "movie-search-overview"> <%= movie.overview %>  </p>
-<% }) %> 
+<div class="container">
 
-<nav aria-label="Page navigation example">
-    <ul class="pagination justify-content-center">
-      <% for(let i =0 ; i < pages; i++) {%> 
-        <!-- <a class="page-link" href=<%=// `/movies/${i+1} ` %>> <%= i+1 %> </a> -->
-      <li class="page-item">
-          <form action="/movies/<%= i+1 %> ">
-            <input hidden type="text" name="page" value=<%= `${i+1}` %>>
-            <input hidden type="text" name="movies" value="<%= movieSearch  %>" >
-        
-            <button><%= `${i+1}` %></button>
-          </form>
-     </li>
-      <% } %> 
-    </ul>
-  </nav>
+    <% movies.forEach(movie =>{ %> 
+        <div class="row search-container">
+            <div class="col d-flex" >
+                <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
+                <div class="d-flex flex-column justify-content-around">
+                  <div class="d-flex justify-content-between">
+                    <h3 class=""><a href="/movies/info/<%= movie.id %> "><%= movie.title %></a> </h3>
+                    <form action="/favorites" method="POST">
+                      <input hidden type="text" name="movieId" value="<%= movie.id %> ">
+                      <button type="submit">favorites</button>
+                    </form>
+                  </div>
+                  <p class= "movie-search-overview"> <%= movie.overview %>  </p>
+                </div>
+            </div>
+        </div>
+    <% }) %> 
+      <nav aria-label="Page navigation example">
+        <ul class="pagination">
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Previous">
+              <span aria-hidden="true">&laquo;</span>
+              <span class="sr-only">Previous</span>
+            </a>
+          </li>
+          <% for(let i =0 ; i < pages; i++) {%> 
+          <li class="page-item">
+              <form action="/movies/<%= i+1 %> ">
+                <input hidden type="text" name="page" value=<%= `${i+1}` %>>
+                <input hidden type="text" name="movies" value="<%= movieSearch  %>" >
+            
+                <button><%= `${i+1}` %></button>
+              </form>
+         </li>
+          <% } %> 
+          <li class="page-item">
+            <a class="page-link" href="#" aria-label="Next">
+              <span aria-hidden="true">&raquo;</span>
+              <span class="sr-only">Next</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+</div>
