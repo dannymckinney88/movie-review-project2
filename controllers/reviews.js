@@ -1,5 +1,7 @@
 const express = require('express')
 const db = require('../models')
+const passport = require('../config/ppConfig');
+
 
 const router = express.Router()
 
@@ -17,12 +19,6 @@ router.get('/:id', (req, res) =>{
 // GET route for displaying form to create new review
 router.get('/new', (req,res) =>{
 
-})
-
-
-// post route for comments 
-router.post('/:id/comment', (req,res) =>{
-    res.redirect('/:id')
 })
 
 module.exports = router

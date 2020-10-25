@@ -1,14 +1,16 @@
 body {
   background-color: goldenrod;
+  position: relative;
+  box-sizing: border-box;
 }
-
+/*
 form {
   position: relative;
   top: -25px;
   display: flex;
   justify-content: center;
 }
-
+*/
 
 nav ul li {
   text-decoration: none;
@@ -17,7 +19,35 @@ nav ul li {
   text-align: center;
 }
 
-h1 {
-  color: rgb(0, 174, 255);
+.form-control {
   text-align: center;
 }
+
+h1 {
+  color: chartreuse;
+}
+
+.search-img{
+  height: 200px;
+}
+
+/* .movie-search-overview{
+  position: relative;
+  display: inline;
+  bottom: 20px;
+} 
+div {
+  position: relative;
+  display: flex;
+}
+      
+.list-group-item {
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  align-content: flex-start;
+  width: 100%;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  transition: height .5 linear;
+} */
