@@ -4,10 +4,15 @@
         <div class="d-flex flex-column">
             <h2><%= info.title %> </h2>
             <div class ="d-flex">
-                <p> <%= info.release_date %>  (<%= info.production_companies[1].origin_country %>) </p>
+                <p> <%= info.release_date %>  (<%= info.production_companies[0].origin_country %>) </p>
             </div>
         </div>
     </div>
+    
+    <form action="/reviews" method="GET">
+        <input hidden type="text" name="movieId" value="<%= info.id %> ">
+        <button type="submit">Write A Review</button>
+    </form>
 
 
 </div>

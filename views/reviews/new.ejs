@@ -1,0 +1,30 @@
+<div class="container">
+    <div class="row">
+        <div class="col-9 d-flex">
+            <img class="review-img" src="<%= `https://image.tmdb.org/t/p/w500/${info.poster_path}` %>" alt="">
+         <div class="d-flex flex-column review-info-wrapper">
+             <h3> <%= user.username %>'s  review</h3>
+             <span>
+                <h5 class="d-inline">Movie: </h5>
+                <p class="d-inline"> <%= info.title %> </p>
+             </span>
+             <span>
+                 <h5 class="d-inline">Release Year:</h5>
+                 <p class="d-inline"><%= (`${info.release_date}`).replace(/(^\d+)(.+$)/i,'$1'); %></p>
+             </span>
+             <form action="/reviews" method="POST">
+                <div class="form-group">
+                    <label for="exampleFormControlTextarea1">Write review</label>
+                    <textarea class="review-input form-control" name="content" rows="9"></textarea>
+                    <input type="hidden" name="userId" value=" <%= user.userId %>  ">
+                    <button type="submit">Submit</button>
+                  </div>
+             </form>
+        </div>   
+        </div>
+        <div class="col">
+            <img class="review-logo" src="<%= `https://image.tmdb.org/t/p/w500/${info.production_companies[0].logo_path}` %>" alt="">
+        </div>
+    </div>
+
+</div>

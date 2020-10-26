@@ -42,3 +42,44 @@ h1 {
   padding: 6px 2px;
   border: 1px solid lightgray;
 }
+
+.review-img{
+  height: 400px;
+}
+
+.review-info-wrapper{
+  margin-left: 10px;
+}
+
+.review-logo{
+  width:10vw;
+}
+
+.review-input{
+  width: 500px;
+}
+
+.horizontal-scroll-wrapper {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.horizontal-scroll-wrapper > div {
+  display: inline-block;
+}
+
+.popular-movie-img{
+  display: inline-block;
+  height: 200px
+}
+
+.carousel{
+  width:50vw;
+  margin: 0 auto;
+}
+
+.test{
+  height: 300px;
+  width:300px;
+}
