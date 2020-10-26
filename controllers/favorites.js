@@ -13,26 +13,25 @@ router.get('/', (req, res) =>{
         console.log('-------------------------------------------------------------------------------------')
         console.log(favorites[0].dataValues)
         console.log('-------------------------------------------------------------------------------------')
-        res.render('movies/favorites',{favoriteMovies: favorites})
+        res.render('movies/favorites', {favoriteMovies: favorites})
 
-    })
+})
 })
 
 // Add a movie to the a users favorties list
 router.post('/', (req,res) =>{
+    console.log(req.body.movieTitle)
     db.favorite.findOrCreate({
         where: {
             userId: req.user.id,
-            movieId: req.body.movieId
+            movieId: req.body.movieId,
+            movieTitle: req.body.movieTitle,
+            moviePoster: req.body.moviePoster
         }
     }).then(createFavorite => {
-        //console.log(createFavorite)
-        // redirect 
+        console.log(createFavorite) 
         res.redirect('/favorites')
-    })
-    //console.log(req.user)
-    //console.log(req.body)
-   // console.log(req.body.movieId)
+})
 })
 
 // Delete a movie from the users favorites list

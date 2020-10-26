@@ -11,6 +11,8 @@
                     <h3 class=""><a href="/movies/info/<%= movie.id %> "><%= movie.title %></a> </h3>
                     <form action="/favorites" method="POST">
                       <input hidden type="text" name="movieId" value="<%= movie.id %> ">
+                      <input type="hidden" name="movieTitle" value="<%= movie.title %> ">
+                      <input type="hidden" name="moviePoster" value="<%= movie.poster_path %> ">
                       <button type="submit">favorites</button>
                     </form>
                   </div>
