@@ -1,11 +1,27 @@
+
+/*
+form {
+  position: relative;
+  top: -25px;
+  display: flex;
+  justify-content: center;
+}
+*/
+
 nav ul li {
   text-decoration: none;
   display: inline-block;
   margin-right: .3em;
+  text-align: center;
+}
+
+.form-control {
+  text-align: center;
 }
 
 h1 {
-  color: chartreuse;
+  color: rgb(60, 90, 29);
+  text-align: center;
 }
 
 .search-img{

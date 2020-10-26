@@ -14,6 +14,12 @@ module.exports = {
       userId: {
         type: Sequelize.INTEGER
       },
+      movieTitle: {
+        type: Sequelize.STRING
+      },
+      moviePoster: {
+        type: Sequelize.STRING
+      },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE
