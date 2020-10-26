@@ -20,7 +20,8 @@ nav ul li {
 }
 
 h1 {
-  color: chartreuse;
+  color: rgb(60, 90, 29);
+  text-align: center;
 }
 
 .search-img{

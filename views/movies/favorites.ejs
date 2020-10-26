@@ -1,5 +1,16 @@
-<h1>test</h1>
+<h1>Favorites</h1>
 
 <form method="GET" action="/favorites">
+    <label for="favorites">Search your Favorites</label>
+    <input id="favorites" type="text" name="favorites">
+    <input type="submit">
+    
     
 </form>
+
+<% favoriteMovies.forEach(favorite => { %> 
+
+    <h3><%= favorite.id %> </h3>
+    <h3><%= favorite.movieId %> </h3>
+
+<% }) %> 
