@@ -15,10 +15,18 @@ router.get('/', (req, res) =>{
 
 // Add a movie to the a users favorties list
 router.post('/', (req,res) =>{
+    db.favorites.findOrCreate({
+        where: {
+            username: req.body.username,
+            movie: req.params.movieId
+        }
+    }).then(favoriteCreated => {
+        res.redirect('/favorites')
+        
+    })
     console.log(req.user.dataValues.id)
     console.log(req.body.movieId)
     // redirect 
-    res.redirect('/favorites')
 })
 
 // Delete a movie from the users favorites list

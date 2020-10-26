@@ -1,8 +1,4 @@
-body {
-  background-color: goldenrod;
-  position: relative;
-  box-sizing: border-box;
-}
+
 /*
 form {
   position: relative;
@@ -31,28 +27,6 @@ h1 {
   height: 200px;
 }
 
-<<<<<<< HEAD
-/* .movie-search-overview{
-  position: relative;
-  display: inline;
-  bottom: 20px;
-} 
-div {
-  position: relative;
-  display: flex;
-}
-      
-.list-group-item {
-  display: flex;
-  justify-content: flex-start;
-  align-items: flex-start;
-  align-content: flex-start;
-  width: 100%;
-  overflow-x: scroll;
-  overflow-y: hidden;
-  transition: height .5 linear;
-} */
-=======
 .search-container{
   border:1px solid lightgrey;
   margin-top: 10px;
@@ -67,4 +41,3 @@ div {
   padding: 6px 2px;
   border: 1px solid lightgray;
 }
->>>>>>> submain
