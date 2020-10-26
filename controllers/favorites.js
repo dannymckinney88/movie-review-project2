@@ -9,24 +9,25 @@ router.use(methodOverride('_method'))
 
 //Display a list of the users favorites 
 router.get('/', (req, res) =>{
-
-    res.render('movies/favorites')
+   // db.user.findAll().then(allFavorite => {  
+        res.render('movies/favorites')
+   // })
 })
 
 // Add a movie to the a users favorties list
 router.post('/', (req,res) =>{
-    db.favorites.findOrCreate({
+    db.favorite.findOrCreate({
         where: {
-            username: req.body.username,
-            movie: req.params.movieId
+            userId: req.user.id,
+            movieId: req.body.movieId
         }
-    }).then(favoriteCreated => {
+    }).then(createFavorite => {
+        // redirect 
         res.redirect('/favorites')
-        
     })
-    console.log(req.user.dataValues.id)
-    console.log(req.body.movieId)
-    // redirect 
+    console.log(req.user)
+    console.log(req.body)
+   // console.log(req.body.movieId)
 })
 
 // Delete a movie from the users favorites list
