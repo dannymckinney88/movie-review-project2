@@ -15,10 +15,11 @@ router.get('/', (req,res) =>{
     const apiKey = process.env.KEY
 
     console.log(req.user.dataValues)
+    const userData = req.user.dataValues
+
     axios.get(`https://api.themoviedb.org/3/movie/${movieId}?api_key=${apiKey}&language=en-US`)
     .then(info =>{
         console.log(info.data)
-        const userData = info.data
         const movieInfo = info.data
         res.render('reviews/new', { info: movieInfo, user: userData})
     })

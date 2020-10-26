@@ -24,8 +24,6 @@ router.get('/info/:id', (req,res) =>{
             const movieInfo = info.data
             res.render('movies/info', { info: movieInfo })
         })
-
-    // res.send('hi')
 })
 
 // route to display movies from search using the id for the correct page to display
