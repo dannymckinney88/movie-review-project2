@@ -32,7 +32,7 @@ router.get('/info/:id', (req,res) =>{
 router.get('/:id', (req, res) =>{
     let pageNum = req.params.id
     let movieSearch = req.query.movies
-    console.log(movieSearch)
+    // console.log(movieSearch)
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieSearch}&page=${pageNum}`)
         .then(movies =>{
             const movieData = movies.data.results
