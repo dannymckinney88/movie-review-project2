@@ -12,7 +12,6 @@ router.use(express.urlencoded({ extended: false }));
 // variables 
 const apiKey = process.env.KEY
 
-
 //Displays info about a single movie 
 
 router.get('/info/:id', (req,res) =>{
@@ -24,15 +23,13 @@ router.get('/info/:id', (req,res) =>{
             const movieInfo = info.data
             res.render('movies/info', { info: movieInfo })
         })
-
-    // res.send('hi')
 })
 
 // route to display movies from search using the id for the correct page to display
 router.get('/:id', (req, res) =>{
     let pageNum = req.params.id
     let movieSearch = req.query.movies
-    console.log(movieSearch)
+    // console.log(movieSearch)
     axios.get(`https://api.themoviedb.org/3/search/movie?api_key=${apiKey}&query=${movieSearch}&page=${pageNum}`)
         .then(movies =>{
             const movieData = movies.data.results
