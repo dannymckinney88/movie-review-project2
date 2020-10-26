@@ -12,7 +12,6 @@ router.use(express.urlencoded({ extended: false }));
 // variables 
 const apiKey = process.env.KEY
 
-
 //Displays info about a single movie 
 
 router.get('/info/:id', (req,res) =>{

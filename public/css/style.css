@@ -42,3 +42,25 @@ h1 {
 .review-input{
   width: 500px;
 }
+
+.horizontal-scroll-wrapper {
+  /* width: 100px;
+  height: 300px;
+  overflow-y: auto;
+  overflow-x: hidden;
+  transform: rotate(-90deg);
+  transform-origin: right top;
+  transform:rotate(-90deg) translateY(-100px); */
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+}
+
+.horizontal-scroll-wrapper > div {
+  display: inline-block;
+}
+
+.popular-movie-img{
+  display: inline-block;
+  height: 200px
+}

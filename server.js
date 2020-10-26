@@ -5,6 +5,8 @@ const session = require('express-session')
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const axios = require('axios')
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -32,9 +34,22 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
+
+const apiKey = process.env.KEY
+
+// Display home page of diffrent movies
+
+app.get('/', (req,res) =>{
+    
+  axios.get(`https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`)
+      .then(trendingMovies =>{
+          console.log(trendingMovies.data)
+      })
+      res.render('index');
+})
+// app.get('/', (req, res) => {
+  
+// });
 
 app.get('/profile', isLoggedIn, (req, res) => {
   res.render('profile');
