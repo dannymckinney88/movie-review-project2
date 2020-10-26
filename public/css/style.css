@@ -44,13 +44,6 @@ h1 {
 }
 
 .horizontal-scroll-wrapper {
-  /* width: 100px;
-  height: 300px;
-  overflow-y: auto;
-  overflow-x: hidden;
-  transform: rotate(-90deg);
-  transform-origin: right top;
-  transform:rotate(-90deg) translateY(-100px); */
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
@@ -63,4 +56,14 @@ h1 {
 .popular-movie-img{
   display: inline-block;
   height: 200px
+}
+
+.carousel{
+  width:50vw;
+  margin: 0 auto;
+}
+
+.test{
+  height: 300px;
+  width:300px;
 }
