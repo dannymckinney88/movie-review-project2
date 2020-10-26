@@ -12,10 +12,11 @@
                  <h5 class="d-inline">Release Year:</h5>
                  <p class="d-inline"><%= (`${info.release_date}`).replace(/(^\d+)(.+$)/i,'$1'); %></p>
              </span>
-             <form action="" method="POST">
+             <form action="/reviews" method="POST">
                 <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Example textarea</label>
-                    <textarea class="review-input form-control"  rows="9"></textarea>
+                    <label for="exampleFormControlTextarea1">Write review</label>
+                    <textarea class="review-input form-control" name="content" rows="9"></textarea>
+                    <input type="hidden" name="userId" value=" <%= user.userId %>  ">
                     <button type="submit">Submit</button>
                   </div>
              </form>
