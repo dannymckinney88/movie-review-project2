@@ -1,16 +1,9 @@
 <h1>Favorites</h1>
 
-<form method="GET" action="/favorites">
-    <label for="favorites">Search your Favorites</label>
-    <input id="favorites" type="text" name="favorites">
-    <input type="submit">
-    
-    
-</form>
 
 <% favoriteMovies.forEach(favorite => { %> 
     <img src="<%= `https://image.tmdb.org/t/p/w500${favorite.moviePoster}` %> " alt="">
-    <h3><%= favorite.moviePoster %> </h3>
-    <h3><%= favorite.id %> </h3>
-    <h3><%= favorite.movieId %> </h3>
+    <h3><%#= favorite.moviePoster %> </h3>
+    <h3><%#= favorite.id %> </h3>
+    <h3><%#= favorite.movieId %> </h3>
 <% }) %> 
