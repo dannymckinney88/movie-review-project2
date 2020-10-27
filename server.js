@@ -41,19 +41,26 @@ const apiKey = process.env.KEY
 // Display home page of diffrent movies
 
 app.get('/', (req,res) =>{
-  let one = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`
-  let two =  `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
+  const one = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`
+  const two =  `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
+  const three = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1` 
 
   const requestOne = axios.get(one)
   const requestTwo = axios.get(two)
+  const requestThree = axios.get(three)
 
-  axios.all([requestOne, requestTwo]).then(axios.spread((...responses) => {
-    const responseOne = responses[0]
-    const responseTwo = responses[1]
-    console.log(responseOne.data)
-    console.log('------------------------------------------------')
-    console.log(responseTwo.data)
-    res.render('index')
+  axios.all([requestOne, requestTwo, requestThree])
+    .then(axios.spread((...responses) => {
+    //  const trendingMovies = responses[0].data.results
+    //  const nowPlaying = responses[1].data.results
+    console.log(responses[2].data.results)
+    //  const upComingMovies = responses[2].data.results
+     res.render('index' ,
+     {
+         trending: responses[0].data.results,
+         playing: responses[1].data.results,
+         upcomming: responses[2].data.results
+     })
   })).catch(errors => {
     // react on errors.
   })

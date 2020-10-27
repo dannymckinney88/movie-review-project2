@@ -83,3 +83,11 @@ h1 {
   height: 300px;
   width:300px;
 }
+
+.slide-text{
+  max-width: 1px;
+}
+
+.page-footer{
+  margin-top: 200px;
+}
