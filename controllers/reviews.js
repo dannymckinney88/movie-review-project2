@@ -29,7 +29,19 @@ router.get('/', (req,res) =>{
 
 // POST route for creating a new post 
 router.post('/', (req,res) => {
-    res.redirect('/')
+    console.log(req.body.moveId)
+    console.log(req.body.content)
+    console.log(req.user.id)
+    db.review.create({
+        content: req.body.content,
+        movieId: req.body.moveId,
+        userId: req.user.id
+
+    }).then(review =>{
+        console.log(review)
+        res.redirect('/')
+    })
+    // /movies/info/<%= movie.id %>
 })
 
 // GET route for displaying single review 
