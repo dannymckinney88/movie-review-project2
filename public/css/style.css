@@ -91,3 +91,7 @@ h1 {
 .page-footer{
   margin-top: 200px;
 }
+
+.stack img{
+  width: 100px;
+}

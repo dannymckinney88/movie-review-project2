@@ -1,16 +1,15 @@
 <h1>Favorites</h1>
 
-<form method="GET" action="/favorites">
-    <label for="favorites">Search your Favorites</label>
-    <input id="favorites" type="text" name="favorites">
-    <input type="submit">
-    
-    
-</form>
-
+<div class="d-flex flex-wrap stack">
 <% favoriteMovies.forEach(favorite => { %> 
-
-    <h3><%= favorite.id %> </h3>
-    <h3><%= favorite.movieId %> </h3>
-
-<% }) %> 
+    <div>
+        <img src="<%= `https://image.tmdb.org/t/p/w500${favorite.moviePoster}` %> " alt="" style="display: block; margin: 0 auto;">
+        <p><a  href="/movies/info/<%= favorite.movieId %> ">more...</a></p>
+        <form action="/favorites?_method=DELETE" method="POST">
+        <input type="hidden" name="id" value=" <%= favorite.id %>  ">
+        <button type="submit">Delete</button>
+    </form>
+    </div>
+        <% }) %> 
+        
+</div>
