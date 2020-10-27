@@ -33,7 +33,10 @@
             <h3>Now Playing</h3>
             <div class="horizontal-scroll-wrapper squares">
               <% playing.forEach(movie =>{ %> 
-                 <div><img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt=""></div>
+                 <div>
+                   <img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt="">
+                   <p class="slide-text"><a href="/movies/info/<%= movie.id %> ">  more info...  </a></p>
+                </div>
               <% }) %>    
             </div>
         </div>  
@@ -47,7 +50,11 @@
           <h3>Upcomming</h3>
           <div class="horizontal-scroll-wrapper squares">
             <% upcomming.forEach(movie =>{ %> 
-               <div><img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt=""></div>
+               <div>
+                 <img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt="">
+                 <p class="slide-text"><a href="/movies/info/<%= movie.id %> ">  more info...  </a></p>
+              </div>
+               
             <% }) %>    
           </div>
       </div>  
