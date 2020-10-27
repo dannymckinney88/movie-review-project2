@@ -53,7 +53,7 @@ app.get('/', (req,res) =>{
     .then(axios.spread((...responses) => {
     //  const trendingMovies = responses[0].data.results
     //  const nowPlaying = responses[1].data.results
-    console.log(responses[2].data.results)
+    // console.log(responses[2].data.results)
     //  const upComingMovies = responses[2].data.results
      res.render('index' ,
      {

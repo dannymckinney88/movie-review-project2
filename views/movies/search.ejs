@@ -8,7 +8,7 @@
                 <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
                 <div class="d-flex flex-column justify-content-around">
                   <div class="d-flex justify-content-between">
-                    <h3 class=""><a href="/movies/info/<%= movie.id %> "><%= movie.title %></a> </h3>
+                    <h3 class=""><a href="/movies/info/<%= movie.id %> "> <%= movie.title %> </a> </h3>
                     <form action="/favorites" method="POST">
                       <input hidden type="text" name="movieId" value="<%= movie.id %> ">
                       <input type="hidden" name="movieTitle" value="<%= movie.title %> ">
@@ -48,3 +48,4 @@
         </ul>
       </nav>
 </div>
+
