@@ -17,9 +17,9 @@ const apiKey = process.env.KEY
 router.get('/info/:id', (req,res) =>{
     const id = req.params.id
 
-    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US`)
+    axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits`)
         .then(info =>{
-            console.log(info.data)
+            console.log(info.data.videos.results[0].key)
             const movieInfo = info.data
             res.render('movies/info', { info: movieInfo })
         })
