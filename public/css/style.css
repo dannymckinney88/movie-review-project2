@@ -150,10 +150,10 @@ a.detail {
   padding-bottom: 75px;
 }
 .btn-primary {
-  color: red;
-  background-color: black;
+  background-color: transparent;
+  color: rgb(60, 90, 29);
   border: none;
 }
 .btn-primary:hover{
-  background-color: black;
+  background-color: darkkhaki;
 }
