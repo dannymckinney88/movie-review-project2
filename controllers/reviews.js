@@ -49,9 +49,7 @@ router.get('/:id', (req, res) =>{
     res.send('hey ')
 })
 
-// GET route for displaying form to create new review
-router.get('/new', (req,res) =>{
 
-})
+
 
 module.exports = router
