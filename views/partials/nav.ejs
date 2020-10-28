@@ -7,6 +7,7 @@
     <% } else { %>
       <li><a href="/auth/logout">Logout</a></li>
       <li><a href="/profile">Profile</a></li>
+      <li><a href="/favorites">Favorites</a></li>
     <% } %>
   </ul>
 </nav>
@@ -15,6 +16,11 @@
   <!--buttons-->
   <nav>
   <div class="d-flex justify-content-center">
+    <!--home buttone-->
+    <div class="text-center">
+      <a href="/" class="btn btn-primary"><i class="fas fa-home  ml-6"</i></i></a>
+    </div>
+    
     <!--Sign Up button-->
     <div class="text-center">
       <a href="/auth/signup" class="btn btn-primary" data-toggle="modal" data-target="#signupPage">Sign Up<i class="fas fa-user-plus  ml-3"</i></i></a>
@@ -33,6 +39,7 @@
             <button type="button" class="close" data-dismiss="modal" aria-label="close">&times;</button>
           </div>
           <div class="modal-body mx-3">
+            <p>Sign up free to able to save all of your favorite movies and write reviews and comments!</p>
             <div class="md-form mb-5">
               <i class="fas fa-user  grey-text"></i>
               <input type="text" class="form-control validate" placeholder="enter name">
@@ -81,6 +88,15 @@
           <div class="text-center mb-3">
             <button type="button" class="btn btn-primary btn-blocl z-depth-la">Sign In</button>
           </div>
+
+          <p class="font-small blue-text d-flex justify-content-center">or sign in with:</p>
+          <div class="row my-3 justify-content-center">
+            <button type="button" class="btn btn-primary z-depth-la"><i class="fab fa-facebook-f text-center"></i></button>
+            <button type="button" class="btn btn-purple z-depth-la"><i class="fab fa-twitter text-center"></i></button>
+            <button type="button" class="btn btn-red z-depth-la"><i class="fab fa-google text-center"></i></button>
+          </div>
+
+
         </div>
       </div>
     </div>
