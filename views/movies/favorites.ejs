@@ -1,16 +1,17 @@
 <body class="favorite">
 <h1>Favorites</h1>
+<h2>Here is a list of all of your favorite movies, you can add, delete and watch your favorite trailers below!</h2>
 
 <div class="d-flex flex-wrap stack container-fluid">
 <% favoriteMovies.forEach(favorite => { %> 
 
-    <div class="card">
+    <div class="card text-center">
         <img src="<%= `https://image.tmdb.org/t/p/w500${favorite.moviePoster}` %> " alt="" style="display: block; margin: 0 auto;">
         <div class="card-body">
-            <button class="info" type="submit"><a  href="/movies/info/<%= favorite.movieId %> ">More Details</a></button>
+        <div><a class="detail"  href="/movies/info/<%= favorite.movieId %> ">Movie Details<i class="fas fa-film ml-4"></i></a></div>
         <form action="/favorites?_method=DELETE" method="POST">
         <input type="hidden" name="id" value=" <%= favorite.id %>  ">
-        <button class="delete" type="submit">Delete</button>
+        <button class="delete" type="submit">Delete<i class="fas fa-trash ml-4"></i></button>
         </form>
         </div>
     </div>
