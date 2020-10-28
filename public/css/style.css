@@ -185,4 +185,5 @@ a.detail {
 .btn-primary:active{
   color: rgb(60, 90, 29);
   background-color: transparent;
+  text-decoration: none;
 }
