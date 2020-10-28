@@ -2,8 +2,7 @@
 .trailer{
   position: relative;
 }
-<<<<<<< HEAD
-*/
+
 body {
   font-family: lobster, cursive;
 
@@ -11,10 +10,8 @@ body {
 .favorite {
   background-color: darkkhaki;
 }
-=======
 
 
->>>>>>> submain
 
 nav ul li {
   text-decoration: none;
@@ -27,10 +24,9 @@ nav ul li {
   text-align: center;
 }
 
-/* h1 {
+ h1 {
   color: rgb(60, 90, 29);
   text-align: center;
-<<<<<<< HEAD
   text-shadow: 2px 2px black;
   font-size: 100px;
 }
@@ -40,9 +36,7 @@ h2 {
   text-shadow: 1px 1px black;
 
 }
-=======
-} */
->>>>>>> submain
+
 
 .search-img{
   height: 200px;
@@ -168,14 +162,14 @@ a.detail {
   background-color: darkkhaki;
   text-decoration: none;
 }
-.card-body {
+.card-body-fav {
   background-color: transparent;
   padding-top: 10px;
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
 }
-.text-center {
+.text-center-fav {
   padding-right: 15px;
   padding-bottom: 75px;
 }
@@ -189,12 +183,28 @@ a.detail {
   color: rgb(60, 90, 29);
   background-color: transparent;
   text-decoration: none;
+  border-color: transparent;
 }
 .btn-primary:active{
   color: rgb(60, 90, 29);
-  background-color: transparent;
+  background-color: slategray;
+  border-color: transparent;
   text-decoration: none;
   width: 100px;
+}
+.btn-primary:not(:disabled):not(.disabled):active {
+  color: rgb(60, 90, 29);
+  background-color: transparent;
+  border-color: transparent;
+  text-decoration: none;
+}
+.btn-primary.focus, .btn-primary:focus{
+  color: rgb(60, 90, 29);
+  background-color: transparent;
+  border-color: transparent;
+  box-shadow: 0 0 0 0.2rem rgb(60, 90, 29);
+  text-decoration: none;
+
 }
 
 .info-img-bg{
