@@ -7,6 +7,9 @@ form {
   justify-content: center;
 }
 */
+.trailer{
+  position: relative;
+}
 
 nav ul li {
   text-decoration: none;
@@ -26,6 +29,7 @@ h1 {
 
 .search-img{
   height: 200px;
+  border-radius: 15px;
 }
 
 .search-container{
@@ -35,6 +39,8 @@ h1 {
 
 .info-img{
   height: 400px;
+  margin-left:50px;
+  border-radius: 15px;
 }
 
 .search-bar{
@@ -90,4 +96,41 @@ h1 {
 
 .page-footer{
   margin-top: 200px;
+}
+
+.stack img{
+  width: 100px;
+}
+
+.info-img-bg{
+  position: relative; 
+  height: 550px;
+  padding-top:75px;
+  width: 100%;
+  /* align-items: center; */
+  justify-content: first baseline;
+  /* padding-top: ; */
+}
+
+ /* .info-img-bg::before {    
+  content: "";
+  background-image: url('https://placekitten.com/1200/800');
+  background-size:cover;
+  position:absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.5;
+}  */
+
+.info-wrapper{
+  position: relative;
+  line-height: 0.9;
+  text-align: center; 
+  margin-left: 30px;
+}
+
+.info-genre{
+  font-size: 13px;
 }
