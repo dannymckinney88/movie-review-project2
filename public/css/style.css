@@ -22,6 +22,7 @@ nav ul li {
 h1 {
   color: rgb(60, 90, 29);
   text-align: center;
+  text-shadow: 2px 2px black;
 }
 
 .search-img{
@@ -93,5 +94,35 @@ h1 {
 }
 
 .stack img{
-  width: 100px;
+  width: 200px; 
+  align-items: stretch;
+  justify-content: around;
+  padding-right: 2px;
+}
+.card {
+  border: none;
+}
+.info {
+  color: red;
+  border-radius: 30%;
+}
+.delete {
+  background-color: black;
+  color: red;
+  border-radius: 30%;
+}
+.card-body {
+  background-color: rgb(247, 244, 239);
+}
+.text-center {
+  padding-right: 15px;
+  padding-bottom: 75px;
+}
+.btn-primary {
+  color: red;
+  background-color: black;
+  border: none;
+}
+.btn-primary:hover{
+  background-color: black;
 }
