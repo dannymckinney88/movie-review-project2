@@ -106,7 +106,33 @@ h2 {
 .page-footer{
   margin-top: 200px;
 }
+/*
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 5;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  left: 0;
+  top: 0;
+  width: 50%;
+  height: 50%;
+  overflow: auto;
+}
 
+
+.modal-content{
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+  width: 80%;
+  font-size: 3vw;
+}
+*/
+.modal-body{
+  font-size: 25px;
+  text-decoration-style: wavy;
+}
 .stack img{
   width: 200px; 
   align-items: stretch;
@@ -125,25 +151,21 @@ h2 {
 a.detail {
   font-style: italic;
   color: rgb(60, 90, 29);
+  text-decoration: none;
 }
 .delete {
   color: rgb(60, 90, 29);
   font-style: italic;
   border: none;
   background-color: darkkhaki;
+  text-decoration: none;
 }
 .card-body {
-  background-color: darkkhaki;
+  background-color: transparent;
   padding-top: 10px;
   padding-bottom: 5px;
   padding-left: 5px;
   padding-right: 5px;
-}
-.modal {
-  position: fixed;
-  top: 50%;
-  left: 100%;
-  transform: translate(-50%, -50%);
 }
 .text-center {
   padding-right: 15px;
@@ -153,7 +175,14 @@ a.detail {
   background-color: transparent;
   color: rgb(60, 90, 29);
   border: none;
+  text-decoration: none;
 }
 .btn-primary:hover{
-  background-color: darkkhaki;
+  color: rgb(60, 90, 29);
+  background-color: transparent;
+  text-decoration: none;
+}
+.btn-primary:active{
+  color: rgb(60, 90, 29);
+  background-color: transparent;
 }
