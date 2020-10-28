@@ -19,7 +19,7 @@ router.get('/info/:id', (req,res) =>{
 
     axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=${apiKey}&language=en-US&append_to_response=videos,credits,images`)
         .then(info =>{
-            console.log(info.data)
+            console.log(info.data.credits.cast)
             const movieInfo = info.data
             res.render('movies/info', { info: movieInfo })
         })

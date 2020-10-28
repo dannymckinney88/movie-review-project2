@@ -1,15 +1,9 @@
 
-/*
-form {
-  position: relative;
-  top: -25px;
-  display: flex;
-  justify-content: center;
-}
-*/
 .trailer{
   position: relative;
 }
+
+
 
 nav ul li {
   text-decoration: none;
@@ -22,10 +16,10 @@ nav ul li {
   text-align: center;
 }
 
-h1 {
+/* h1 {
   color: rgb(60, 90, 29);
   text-align: center;
-}
+} */
 
 .search-img{
   height: 200px;
@@ -107,22 +101,10 @@ h1 {
   height: 550px;
   padding-top:75px;
   width: 100%;
-  /* align-items: center; */
+
   justify-content: first baseline;
-  /* padding-top: ; */
 }
 
- /* .info-img-bg::before {    
-  content: "";
-  background-image: url('https://placekitten.com/1200/800');
-  background-size:cover;
-  position:absolute;
-  top: 0px;
-  right: 0px;
-  bottom: 0px;
-  left: 0px;
-  opacity: 0.5;
-}  */
 
 .info-wrapper{
   position: relative;
@@ -133,4 +115,58 @@ h1 {
 
 .info-genre{
   font-size: 13px;
+}
+
+.footer-img{
+  height: 100px;
+}
+
+.user-average-raiting{
+  margin: 8px 0 0 8px;
+}
+
+.favorite-btn,.review-btn{
+  margin-left: 20px;
+  font-size: 10px;
+  border: none;
+  outline: none;
+  background: none;
+  cursor: pointer;
+  color: black;
+  padding: 0;
+  text-decoration: underline;
+  font-family: inherit;
+  font-size: inherit;
+  /* border-radius: 33%; */
+}
+
+.review-btn:hover{
+  color: blue;
+}
+
+.favorite-btn:hover{
+  color: blue;
+}
+
+.favorite-wrapper{
+  margin-left:5px;
+}
+
+.info-title{
+  text-align: left;
+}
+
+.cast-wrapper{
+  border: none;
+}
+
+.cast-img{
+  display: inline-block;
+  height: 200px;
+  border: none;
+}
+
+.overview-text{
+  font-weight: 100px;
+  letter-spacing: 1px;
 }
