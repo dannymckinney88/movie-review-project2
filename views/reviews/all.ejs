@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="row">
+        <div class="col">
+            <ul class="list-unstyled">
+                <% reviews.forEach(review =>{ %> 
+                <li class="media">
+                  <img src=" <%= `https://image.tmdb.org/t/p/w500/${review.moviePoster}` %> " class="mr-3 review-img" alt="...">
+                  <div class="media-body">
+                     <div class="d-flex">
+                        <h5 class="mt-0 mb-1"> <%= review.dataValues.movieTitle %>&nbsp;&nbsp;</h5>
+                        <p>Movie review &nbsp;&nbsp;</p>
+                        <h5>By	&nbsp;&nbsp;</h5>
+                        <p> <%= review.dataValues.user.dataValues.username %>  </p>
+                    </div> 
+                    <%= review.dataValues.content %> 
+                  </div>
+                </li>
+            <% }) %> 
+              </ul>
+        </div>
+    </div>
+</div>

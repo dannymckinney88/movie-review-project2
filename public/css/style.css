@@ -2,19 +2,12 @@
 .trailer{
   position: relative;
 }
-<<<<<<< HEAD
-*/
-body {
-  font-family: lobster, cursive;
 
+
+body{
+ background-color: black;
+ color:white;
 }
-.favorite {
-  background-color: darkkhaki;
-}
-=======
-
-
->>>>>>> submain
 
 nav ul li {
   text-decoration: none;
@@ -23,6 +16,8 @@ nav ul li {
   text-align: center;
 }
 
+
+
 .form-control {
   text-align: center;
 }
@@ -30,23 +25,15 @@ nav ul li {
 /* h1 {
   color: rgb(60, 90, 29);
   text-align: center;
-<<<<<<< HEAD
-  text-shadow: 2px 2px black;
-  font-size: 100px;
-}
-h2 {
-  color: rgb(60, 90, 29);
-  text-align: center;
-  text-shadow: 1px 1px black;
-
-}
-=======
 } */
->>>>>>> submain
 
 .search-img{
   height: 200px;
   border-radius: 15px;
+}
+
+.carousel-font{
+  text-align: left;
 }
 
 .search-container{
@@ -86,26 +73,39 @@ h2 {
   overflow-x: scroll;
   overflow-y: hidden;
   white-space: nowrap;
+  width:90%;
+  margin:auto;
+  margin-top: 10px;
 }
 
 .horizontal-scroll-wrapper > div {
   display: inline-block;
 }
 
+
+
 .popular-movie-img{
   display: inline-block;
-  height: 200px
+  height: 300px;
+  padding-bottom: 10px;
+}
+
+.jumbotron{
+  margin: 20px 0;
 }
 
 .carousel{
-  width:50vw;
+  width:100vw;
   margin: 0 auto;
 }
 
-.test{
-  height: 300px;
-  width:300px;
+.carousel-img{
+  width: 100vw;
+  height: 350px;
+
 }
+ 
+
 
 .slide-text{
   max-width: 1px;
@@ -114,29 +114,7 @@ h2 {
 .page-footer{
   margin-top: 200px;
 }
-/*
-.modal {
-  display: none;
-  position: fixed;
-  z-index: 5;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  left: 0;
-  top: 0;
-  width: 50%;
-  height: 50%;
-  overflow: auto;
-}
 
-
-.modal-content{
-  margin: auto;
-  text-align: center;
-  padding: 20px;
-  width: 80%;
-  font-size: 3vw;
-}
-*/
 .modal-body{
   font-size: 25px;
   text-decoration-style: wavy;
@@ -270,4 +248,13 @@ a.detail {
 .overview-text{
   font-weight: 100px;
   letter-spacing: 1px;
+}
+
+.review-img{
+  height: 200px;
+  padding-bottom: 10px;
+}
+
+.fa-heart,.fa-comment{
+  color:white;
 }

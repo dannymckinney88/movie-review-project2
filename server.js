@@ -48,29 +48,24 @@ app.get('/', (req,res) =>{
   const requestOne = axios.get(one)
   const requestTwo = axios.get(two)
   const requestThree = axios.get(three)
+  console.log(req.user)
 
   axios.all([requestOne, requestTwo, requestThree])
     .then(axios.spread((...responses) => {
-    //  const trendingMovies = responses[0].data.results
-    //  const nowPlaying = responses[1].data.results
-    // console.log(responses[2].data.results)
-    //  const upComingMovies = responses[2].data.results
      res.render('index' ,
      {
          trending: responses[0].data.results,
          playing: responses[1].data.results,
-         upcomming: responses[2].data.results
+         upcomming: responses[2].data.results,
+         user: req.user
      })
   })).catch(errors => {
     // react on errors.
   })
     
 })
-// app.get('/', (req, res) => {
-  
-// });
 
-app.get('/profile', isLoggedIn, (req, res) => {
+app.get('/profile',isLoggedIn,(req, res) => {
   res.render('profile');
 });
 
