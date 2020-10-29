@@ -44,7 +44,7 @@ h2 {
 }
 
 .search-container{
-  border:1px solid lightgrey;
+  border:1px solid;
   margin-top: 10px;
 }
 
@@ -57,7 +57,7 @@ h2 {
 .search-bar{
   width: 55vw;
   padding: 6px 2px;
-  border: 1px solid lightgray;
+  border: 1px lightgrey;
 }
 
 .review-img{
@@ -145,7 +145,7 @@ h2 {
 
 }
 
-.card {
+.card-body-fav {
   border: none;
   background-color: darkkhaki;
 
@@ -169,15 +169,17 @@ a.detail {
   padding-left: 5px;
   padding-right: 5px;
 }
-.text-center-fav {
-  padding-right: 15px;
-  padding-bottom: 75px;
-}
+
 .btn-primary {
   background-color: transparent;
+  text-align: center;
   color: rgb(60, 90, 29);
   border: none;
   text-decoration: none;
+  margin-top: 1px;
+  margin-right: 2px;
+  top: 0;
+  right: 0;
 }
 .btn-primary:hover{
   color: rgb(60, 90, 29);
