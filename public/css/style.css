@@ -3,6 +3,9 @@
   position: relative;
 }
 
+nav{
+  margin-top: 10px;
+}
 
 body{
  background-color: black;
@@ -16,6 +19,9 @@ nav ul li {
   text-align: center;
 }
 
+.search-bar{
+  margin-left:20px;
+}
 
 
 .form-control {
@@ -48,7 +54,8 @@ nav ul li {
 }
 
 .search-bar{
-  width: 55vw;
+  margin-left: 150px;
+  width: 40vw;
   padding: 6px 2px;
   border: 1px solid lightgray;
 }
