@@ -9,7 +9,11 @@ router.use(methodOverride('_method'))
 
 //Display a list of the users favorites 
 router.get('/', (req, res) =>{
-    db.favorite.findAll().then(favorites => {
+    db.favorite.findAll({
+        where:{
+            userId: req.user.id
+        }
+    }).then(favorites => {
     res.render('movies/favorites', {favoriteMovies: favorites})
 
 })
