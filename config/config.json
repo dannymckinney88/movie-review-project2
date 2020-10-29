@@ -1,6 +1,6 @@
 {
   "development": {
-    "database": "express_auth_development",
+    "database": "project2",
     "host": "127.0.0.1",
     "dialect": "postgres"
   },
@@ -10,8 +10,6 @@
     "dialect": "postgres"
   },
   "production": {
-    "database": "express_auth_production",
-    "host": "127.0.0.1",
-    "dialect": "postgres"
+    "use_env_variable": "postgresql-lively-41045"
   }
 }

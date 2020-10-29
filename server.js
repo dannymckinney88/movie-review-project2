@@ -5,6 +5,9 @@ const session = require('express-session')
 const flash = require('connect-flash');
 const passport = require('./config/ppConfig');
 const isLoggedIn = require('./middleware/isLoggedIn');
+const axios = require('axios');
+const { response } = require('express');
+
 const app = express();
 
 app.set('view engine', 'ejs');
@@ -32,15 +35,44 @@ app.use((req, res, next) => {
   next();
 });
 
-app.get('/', (req, res) => {
-  res.render('index');
-});
 
-app.get('/profile', isLoggedIn, (req, res) => {
+const apiKey = process.env.KEY
+
+// Display home page of diffrent movies
+
+app.get('/', (req,res) =>{
+  const one = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`
+  const two =  `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
+  const three = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1` 
+
+  const requestOne = axios.get(one)
+  const requestTwo = axios.get(two)
+  const requestThree = axios.get(three)
+  console.log(req.user)
+
+  axios.all([requestOne, requestTwo, requestThree])
+    .then(axios.spread((...responses) => {
+     res.render('index' ,
+     {
+         trending: responses[0].data.results,
+         playing: responses[1].data.results,
+         upcomming: responses[2].data.results,
+         user: req.user
+     })
+  })).catch(errors => {
+    // react on errors.
+  })
+    
+})
+
+app.get('/profile',isLoggedIn,(req, res) => {
   res.render('profile');
 });
 
-app.use('/auth', require('./routes/auth'));
+app.use('/auth', require('./controllers/auth'));
+app.use('/reviews', require('./controllers/reviews'));
+app.use('/movies', require('./controllers/movies'));
+app.use('/favorites', require('./controllers/favorites'));
 
 var server = app.listen(process.env.PORT || 3000, ()=> console.log(`🎧You're listening to the smooth sounds of port ${process.env.PORT || 3000}🎧`));
 
