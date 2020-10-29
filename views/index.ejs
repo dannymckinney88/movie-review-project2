@@ -59,12 +59,22 @@
 
 
     <div class="jumbotron bg-dark">
-      <h1 class="display-4 text-white">Hello, world!</h1>
-      <p class="lead text-white">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+      <h1 class="display-4 text-white">Are you a member yet?</h1>
+      <p class="lead text-white"> Enjoy saving movies to you own favorite list, writting reviews, and being able to watch endless trailers  </p>
       <hr class="my-4">
-      <p class="text-white">It uses utility classes for typography and spacing to space content out within the larger container.</p>
-      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+      <p class="text-white">Sign up below</p>
+        <!-- Modal Register Form -->
+        <% if (!currentUser) { %>
+        <button type="button" class="" data-toggle="modal" data-target="#modalRegisterForm">
+          Sign Up
+        </button>
+        <% } else{ %> 
+          <h4>Welcome back <%= user.username %> </h4>
+        <% } %> 
     </div>
+
+
+
 <!-- Upcomming -->
 
   <div class="row">

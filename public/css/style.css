@@ -82,13 +82,12 @@ nav ul li {
   display: inline-block;
 }
 
-.now-playing-wrapper{
 
-}
 
 .popular-movie-img{
   display: inline-block;
-  height: 200px
+  height: 300px;
+  padding-bottom: 10px;
 }
 
 .jumbotron{

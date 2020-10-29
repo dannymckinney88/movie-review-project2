@@ -32,13 +32,14 @@
                   <div class="d-flex justify-content-start">
                       <h4>User score &middot;</h4>
                       <p class="user-average-raiting"> <%= info.vote_average %>/10</p>
+                      <% if (currentUser) { %>
                       <form action="/favorites" method="POST">
                           <input hidden type="text" name="movieId" value="<%= info.id %> ">
                           <input type="hidden" name="movieTitle" value="<%= info.title %> ">
                           <input type="hidden" name="moviePoster" value="<%= info.poster_path %> ">
                           <button type="submit" class="favorite-btn"><i class="fas fa-heart fa-2x"></i></button>
                         </form>
-                   
+    
                        <div class="d-flex flex-column favorite-wrapper">
                           <p>Add to</p>
                           <p>Favorites</p>
@@ -53,6 +54,7 @@
                         <p>Write a</p>
                         <p>Review</p>
                       </div>
+                    <% } %> 
                  </div>
                   <div class="d-flex flex-column text-wrap" style="width: 20rem;">
                       <p><%= info.tagline %> </p>

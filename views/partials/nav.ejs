@@ -2,8 +2,8 @@
   <ul>
     <li><a href="/">Home</a></li>
     <% if (!currentUser) { %>
-      <li><a href="/auth/signup">Signup</a></li>
-      <li><a href="/auth/login">Login</a></li>
+      <li>  <a href=""  data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a></li>
+      <li> <a href=""  data-toggle="modal" data-target="#modalLoginForm">Login</a> </li>
     <% } else { %>
       <li><a href="/auth/logout">Logout</a></li>
       <li><a href="/profile">Profile</a></li>
