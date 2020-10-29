@@ -1,62 +1,100 @@
-<!-- Carousel that displays trending -->
-<div id="trending_carousel" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
-      <div class="carousel-item active">
-        <img class="d-block w-100 test" src=" <%= `https://image.tmdb.org/t/p/w500/${trending[0].backdrop_path}` %> " alt="">
-        <div class="carousel-caption d-none d-md-block">
-            <h5><a class="text-white" href="/movies/info/<%= trending[0].id %> "> <%= trending[0].title %>  </a></h5>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col">
+      <!-- Carousel that displays trending -->
+      <div id="trending_carousel" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img class="d-block w-100 test carousel-img" src=" <%= `https://image.tmdb.org/t/p/w500/${trending[0].backdrop_path}` %> " alt="">
+            <div class="carousel-caption d-none d-md-block">
+                <h1 class="carousel-font" ><a class="text-white" href="/movies/info/<%= trending[0].id %> "> <%= trending[0].title %>  </a></h1>
+              </div>
           </div>
+          <% for(let i = 1; i < trending.length; i++){ %>   
+            <div class="carousel-item">
+              <img class="d-block w-100 test carousel-img" src=" <%= `https://image.tmdb.org/t/p/w500/${trending[i].backdrop_path}` %> " alt="">
+              <div class="carousel-caption d-none d-md-block">
+                  <h1 class="carousel-font"><a class="text-white" href="/movies/info/<%= trending[i].id %> "> <%= trending[i].title %>  </a>  </a></h5>
+                </div>
+            </div>      
+                <% } %>  
+              </div>  
+        <a class="carousel-control-prev" href="#trending_carousel" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#trending_carousel" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
       </div>
-      <% for(let i = 1; i < trending.length; i++){ %>   
-        <div class="carousel-item">
-          <img class="d-block w-100 test" src=" <%= `https://image.tmdb.org/t/p/w500/${trending[i].backdrop_path}` %> " alt="">
-          <div class="carousel-caption d-none d-md-block">
-              <h5><a class="text-white" href="/movies/info/<%= trending[i].id %> "> <%= trending[i].title %>  </a>  </a></h5>
-            </div>
-        </div>      
-            <% } %>  
-          </div>  
-    <a class="carousel-control-prev" href="#trending_carousel" role="button" data-slide="prev">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="sr-only">Previous</span>
-    </a>
-    <a class="carousel-control-next" href="#trending_carousel" role="button" data-slide="next">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="sr-only">Next</span>
-    </a>
+    </div>
   </div>
 
+
+  <div class="jumbotron bg-dark jumbotron-fluid">
+    <div class="container ">
+      <h1 class="display-4 text-white">Got the movie itch?</h1>
+      <p class="lead text-white">We have the fix, search all the latest movies and read up on the latest reviews</p>
+      <form class="form-inline" action="/movies/1" method="GET">
+        <input class="search-bar " type="search" placeholder="Search for your all the latest and greatest" aria-label="Search" name="movies" value="">
+        <button class="btn btn-outline-success bg-white my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div>
+  </div>
+
+
   <!-- Now playing  -->
-<div class="container">
+
     <div class="row">
-        <div class="col">
+        <div class="col now-playing-wrapper">
             <h3>Now Playing</h3>
             <div class="horizontal-scroll-wrapper squares">
               <% playing.forEach(movie =>{ %> 
-                 <div>
+                 <div>  
+                  <a href="/movies/info/<%= movie.id %> ">
                    <img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt="">
-                   <p class="slide-text"><a href="/movies/info/<%= movie.id %> ">  Movie Details  </a></p>
+                  </a>
                 </div>
               <% }) %>    
             </div>
         </div>  
     </div>  
-</div>
+
+
+    <div class="jumbotron bg-dark">
+      <h1 class="display-4 text-white">Are you a member yet?</h1>
+      <p class="lead text-white"> Enjoy saving movies to you own favorite list, writting reviews, and being able to watch endless trailers  </p>
+      <hr class="my-4">
+      <p class="text-white">Sign up below</p>
+        <!-- Modal Register Form -->
+        <% if (!currentUser) { %>
+        <button type="button" class="" data-toggle="modal" data-target="#modalRegisterForm">
+          Sign Up
+        </button>
+        <% } else{ %> 
+          <h4>Welcome back <%= user.username %> </h4>
+        <% } %> 
+    </div>
+
+
 
 <!-- Upcomming -->
-<div class="container">
+
   <div class="row">
-      <div class="col">
+      <div class="col ">
           <h3>Upcomming</h3>
           <div class="horizontal-scroll-wrapper squares">
             <% upcomming.forEach(movie =>{ %> 
                <div>
-                 <img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt="">
-                 <p class="slide-text"><a href="/movies/info/<%= movie.id %> ">  Movie Details  </a></p>
+                <a href="/movies/info/<%= movie.id %> ">
+                  <img class="popular-movie-img" src=" <%= `https://image.tmdb.org/t/p/w500/${movie.poster_path}` %> " alt="">
+                 </a>
               </div>
                
             <% }) %>    
           </div>
       </div>  
   </div>  
+
 </div>

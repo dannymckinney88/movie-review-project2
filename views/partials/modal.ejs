@@ -1,0 +1,73 @@
+      <!-- Modal for sign up -->
+      <div class="modal fade text-dark" id="modalRegisterForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <form action="/auth/signup" method="POST">
+          <div class="modal-header text-center">
+            <h4 class="modal-title w-100 font-weight-bold">Sign up</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body mx-3">
+            <div class="md-form mb-5">
+              <i class="fas fa-envelope prefix grey-text"></i>
+              <input type="email" id="orangeForm-email" placeholder="Enter your email" name="email" class="form-control validate">
+              <label data-error="wrong" data-success="right" name="email" for="orangeForm-email">Your email</label>
+            </div>
+            <div class="md-form mb-5">
+              <i class="fas fa-user prefix grey-text"></i>
+              <input type="text" id="orangeForm-name" placeholder="Enter a username" name="username" class="form-control validate">
+              <label data-error="wrong" data-success="right" name="username" for="orangeForm-name">Username</label>
+            </div>
+            <div class="md-form mb-4">
+              <i class="fas fa-lock prefix grey-text"></i>
+              <input type="password" id="orangeForm-pass" placeholder="Enter a password "  name="password" class="form-control validate">
+              <label data-error="wrong" data-success="right" name="password" for="orangeForm-pass">Your password</label>
+            </div>
+    
+          </div>
+          <div class="modal-footer d-flex justify-content-center">
+            <button class="btn btn-deep-orange submit">Sign up</button>
+          </div>
+        </form>
+        </div>
+      </div>
+    </div>
+    
+
+  <!-- modal for login -->
+  <div class="modal fade text-dark" id="modalLoginForm" tabindex="-1" role="dialog" aria-labelledby="myModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <form action="/auth/login" method="POST">
+      <div class="modal-header text-center">
+        <h4 class="modal-title w-100 font-weight-bold">Sign in</h4>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body mx-3">
+        <div class="md-form mb-5">
+          <i class="fas fa-envelope prefix grey-text"></i>
+          <input type="email" id="auth-email" placeholder="Enter your email" name="email" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="auth-email">Your email</label>
+        </div>
+
+        <div class="md-form mb-4">
+          <i class="fas fa-lock prefix grey-text"></i>
+          <input type="password" id="auth-password" placeholder="Enter your password" name="password" class="form-control validate">
+          <label data-error="wrong" data-success="right" for="auth-password">Your password</label>
+        </div>
+
+      </div>
+      <div class="modal-footer d-flex justify-content-center">
+        <button class="btn btn-default submit">Login</button>
+      </div>
+    </form>
+    </div>
+  </div>
+</div>
+
