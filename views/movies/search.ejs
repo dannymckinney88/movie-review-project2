@@ -3,7 +3,7 @@
 <div class="container">
     <% movies.forEach(movie =>{ %> 
         <div class="row search-container">
-            <div class="col d-flex" >
+            <div class="col d-flex search-movie bg-white text-dark" >
               <!-- movie image -->
                 <img class="search-img" src="<%= `https://image.tmdb.org/t/p/w500${movie.poster_path}` %> " alt="Picture of <%= movie.title %> ">
                 <div class="d-flex flex-column justify-content-around">

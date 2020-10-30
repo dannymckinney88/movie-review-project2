@@ -25,13 +25,23 @@ The user will first be brought to the home page where they will see some movies 
 
 
 ## Technologies used 
-* Javascript | Node | Express
+* Javascript | Node | Express | API
 * HTML
 * CSS |Bootstrap
 * PSQL| Sequelize | Heroku 
-
 ![](public/assets/db.png)
+![](public/assets/sign_in.png)
 ![](public/assets/homepage.png)
 ![](public/assets/fav.png)
 ![](public/assets/reviews.png)
 ![](public/assets/review.png)
+
+![](public/assets/acount.png)
+
+## Shout outs 
+* Big thanks to The Movie database[TMDB](https://www.themoviedb.org/) for some inspiration and their [ API](https://developers.themoviedb.org/3/getting-started/introduction). So much you can get and the documentation is great.
+* [CSS Tricks](https://css-tricks.com/)
+
+
+
+

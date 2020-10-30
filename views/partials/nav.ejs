@@ -1,14 +1,20 @@
-<nav>
-  <ul>
+<nav class="d-flex">
+  <ul >
     <li><a href="/">Home</a></li>
     <% if (!currentUser) { %>
       <li>  <a href=""  data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a></li>
       <li> <a href=""  data-toggle="modal" data-target="#modalLoginForm">Login</a> </li>
     <% } else { %>
       <li><a href="/auth/logout">Logout</a></li>
+
       <li><a href="/favorites">Favorites</a></li>
       <li><a href="/reviews/all">Reviews</a></li>
     <% } %>
   </ul>
+  <form class="form-inline" action="/movies/1" method="GET">
+    <input class="search-bar " type="search" placeholder="Search for your all the latest and greatest" aria-label="Search" name="movies" value="">
+    <button class=" search-btn " type="submit">Search</button>
+  </form>
+  
 </nav>
 
