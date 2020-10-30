@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@1,300&display=swap');
 
 .trailer{
   position: relative;
@@ -10,6 +11,7 @@ nav{
 body{
  background-color: black;
  color:white;
+ font-family: 'Roboto', sans-serif;
 }
 
 nav ul li {
@@ -115,7 +117,7 @@ nav ul li {
 }
 
 .page-footer{
-  margin-top: 200px;
+  margin-top: 100px;
 }
 
 .modal-body{
@@ -260,4 +262,24 @@ a.detail {
 
 .fa-heart,.fa-comment{
   color:white;
+}
+
+.search-btn,.sign-in-btn{
+  background-color: #fff;
+  height: 40px;
+  border-radius: 5px;
+}
+
+
+.search-btn:hover,.sign-in-btn:hover{
+  background-color: #3b3533;
+  color:white;
+}
+
+.cast-container{
+  margin: 25px 0;
+}
+
+.info-container{
+  margin-top:20px
 }

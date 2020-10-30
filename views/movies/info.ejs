@@ -1,6 +1,6 @@
 <div class="container-fluid">
-    <div class="row">
-        <div  class="col")>
+    <div class="row ">
+        <div  class="col info-container")>
           <!-- Takes img from api and sets to backgroud of div then styles it. -->
             <style>
                  .info-img-bg::before {    
@@ -74,7 +74,7 @@
         <!-- Cast -->
       <div class="container">
         <div class="row">
-            <div class="col">
+            <div class="col cast-container">
                 <h3>Cast</h3>
                 <div class="horizontal-scroll-wrapper squares">
                   <% info.credits.cast.forEach(movieStar =>{ %> 
@@ -94,11 +94,38 @@
 
         <!-- trailer -->
       <div class="row">
-           <div class="col">
+           <div class="col d-flex justify-content-center">
              <iframe width="640" height="410" src=" <%= `https://www.youtube.com/embed/${info.videos.results[0].key}` %> " frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
             </div>
       </div>
-          
+      <!-- Reviews -->
+      <div class=" text-dark review-info bg-white">
+        <h5>Reviews</h5>
+        <% reviews.forEach(review =>{ %> 
+        <div class="media-body">
+          <h5 class="mt-0 ">By, <%= review.user.username %> </h5>
+          <%= review.content %> 
+        <hr>
+        </div>
+        <!-- checking if no revies and if logged in -->
+      <% }) %> 
+        <% if(reviews.length < 1 && !currentUser){  %> 
+            <p>Why don't you sign up or login to leave a review</p>
+            <p> <a href=""  data-toggle="modal" data-target="#modalRegisterForm">Sign Up</a></p>
+            <p> <a href=""  data-toggle="modal" data-target="#modalLoginForm">Login</a> </p>
+      <% } else if(reviews.length < 1){%> 
+        <form action="/reviews" method="GET">
+          <input hidden type="text" name="movieId" value="<%= info.id %> ">
+          <input type="hidden" name="movieTitle" value="<%= info.title %> ">
+          <input type="hidden" name="moviePoster" value="<%= info.poster_path %> ">
+          <p>Leave a review</p>
+           <button type="submit" class="review-btn"><i class="fas fa-comment text-dark fa-2x"></i></button>
+        </form> 
+      <% } %> 
+         
+      </div>
+      
+      
      
  </div>
 

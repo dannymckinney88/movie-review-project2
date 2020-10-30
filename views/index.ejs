@@ -36,10 +36,6 @@
     <div class="container ">
       <h1 class="display-4 text-white">Got the movie itch?</h1>
       <p class="lead text-white">We have the fix, search all the latest movies and read up on the latest reviews</p>
-      <form class="form-inline" action="/movies/1" method="GET">
-        <input class="search-bar " type="search" placeholder="Search for your all the latest and greatest" aria-label="Search" name="movies" value="">
-        <button class="btn btn-outline-success bg-white my-2 my-sm-0" type="submit">Search</button>
-      </form>
     </div>
   </div>
 
@@ -69,7 +65,7 @@
       <p class="text-white">Sign up below</p>
         <!-- Modal Register Form -->
         <% if (!currentUser) { %>
-        <button type="button" class="" data-toggle="modal" data-target="#modalRegisterForm">
+        <button type="button" class="sign-in-btn" data-toggle="modal" data-target="#modalRegisterForm">
           Sign Up
         </button>
         <% } else{ %> 

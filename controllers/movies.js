@@ -23,7 +23,7 @@ router.get('/info/:id', (req,res) =>{
                 },include:[db.user]
             }).then(reviews=>{
                 const movieInfo = info.data
-                res.render('movies/info', { info: movieInfo, review: reviews })
+                res.render('movies/info', { info: movieInfo, reviews: reviews })
             }).catch(err=>{
                 console.log(err)
             })          

@@ -41,14 +41,14 @@ const apiKey = process.env.KEY
 // Display home page of diffrent movies
 
 app.get('/', (req,res) =>{
+  // making three difreent api calls for diffrent movie data 
   const one = `https://api.themoviedb.org/3/trending/movie/week?api_key=${apiKey}`
   const two =  `https://api.themoviedb.org/3/movie/now_playing?api_key=${apiKey}&language=en-US&page=1`
   const three = `https://api.themoviedb.org/3/movie/upcoming?api_key=${apiKey}&language=en-US&page=1` 
-
+//  trending, now playing, upcoming
   const requestOne = axios.get(one)
   const requestTwo = axios.get(two)
   const requestThree = axios.get(three)
-  console.log(req.user)
 
   axios.all([requestOne, requestTwo, requestThree])
     .then(axios.spread((...responses) => {
@@ -64,10 +64,6 @@ app.get('/', (req,res) =>{
   })
     
 })
-
-app.get('/profile',isLoggedIn,(req, res) => {
-  res.render('profile');
-});
 
 app.use('/auth', require('./controllers/auth'));
 app.use('/reviews', require('./controllers/reviews'));
