@@ -16,7 +16,7 @@ router.get('/', (req, res) =>{
     }).then(favorites => {
     res.render('movies/favorites', {favoriteMovies: favorites})
 
-})
+    })
 })
 
 // Add a movie to the a users favorties list
@@ -30,7 +30,7 @@ router.post('/', (req,res) =>{
         }
     }).then(createFavorite => {
         res.redirect('/favorites')
-})
+    })
 })
 
 // Delete a movie from the users favorites list

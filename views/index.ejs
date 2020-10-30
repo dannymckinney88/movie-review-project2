@@ -8,7 +8,7 @@
             <img class="d-block w-100 test carousel-img" src=" <%= `https://image.tmdb.org/t/p/w500/${trending[0].backdrop_path}` %> " alt="">
             <div class="carousel-caption d-none d-md-block">
                 <h1 class="carousel-font" ><a class="text-white" href="/movies/info/<%= trending[0].id %> "> <%= trending[0].title %>  </a></h1>
-              </div>
+            </div>
           </div>
           <% for(let i = 1; i < trending.length; i++){ %>   
             <div class="carousel-item">
@@ -31,7 +31,7 @@
     </div>
   </div>
 
-
+  <!-- search bar jumbotron -->
   <div class="jumbotron bg-dark jumbotron-fluid">
     <div class="container ">
       <h1 class="display-4 text-white">Got the movie itch?</h1>
@@ -61,7 +61,7 @@
         </div>  
     </div>  
 
-
+      <!-- Sign up jumbotron -->
     <div class="jumbotron bg-dark">
       <h1 class="display-4 text-white">Are you a member yet?</h1>
       <p class="lead text-white"> Enjoy saving movies to you own favorite list, writting reviews, and being able to watch endless trailers  </p>
