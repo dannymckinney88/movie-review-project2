@@ -1,6 +1,7 @@
 <div class="container-fluid">
     <div class="row">
         <div  class="col")>
+          <!-- Takes img from api and sets to backgroud of div then styles it. -->
             <style>
                  .info-img-bg::before {    
                      content: "";
@@ -16,12 +17,14 @@
                      /* height: 200px; */
                     } 
             </style>
+            <!-- info container -->
             <div class="d-flex info-img-bg">
                 <img class="info-img position-relative" src="<%= `https://image.tmdb.org/t/p/w500/${info.poster_path}` %>" alt="">
                 <div class="d-flex flex-column info-wrapper  ">
                   <h1 class="info-title"><%= info.title %> </h1>
                   <div class ="d-flex">
                       <p> <%= info.release_date %> 
+                        <!-- checking if api movie has contry origin -->
                         <% if(info.production_companies.length >= 1) {%> 
                         (<%= info.production_companies[0].origin_country %>) </p>
                         <% } %> 
@@ -33,6 +36,7 @@
                       <h4>User score &middot;</h4>
                       <p class="user-average-raiting"> <%= info.vote_average %>/10</p>
                       <% if (currentUser) { %>
+                        <!-- Favorite button if logged in -->
                       <form action="/favorites" method="POST">
                           <input hidden type="text" name="movieId" value="<%= info.id %> ">
                           <input type="hidden" name="movieTitle" value="<%= info.title %> ">
@@ -44,6 +48,7 @@
                           <p>Add to</p>
                           <p>Favorites</p>
                         </div>
+                        <!-- comment button -->
                      <form action="/reviews" method="GET">
                       <input hidden type="text" name="movieId" value="<%= info.id %> ">
                       <input type="hidden" name="movieTitle" value="<%= info.title %> ">
@@ -66,7 +71,7 @@
           </div>
       </div>
 
-
+        <!-- Cast -->
       <div class="container">
         <div class="row">
             <div class="col">

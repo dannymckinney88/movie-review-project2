@@ -4,7 +4,7 @@
 
 <div class="d-flex flex-wrap stack container-fluid">
 <% favoriteMovies.forEach(favorite => { %> 
-
+    <!-- display each of a users favorites -->
     <div class="card text-center">
         <img src="<%= `https://image.tmdb.org/t/p/w500${favorite.moviePoster}` %> " alt="" style="display: block; margin: 0 auto;">
         <div class="card-body">
@@ -18,12 +18,5 @@
     <% }) %> 
 </div>
 </body>
-    <!-- <div>
-        <img src="<//%= `https://image.tmdb.org/t/p/w500${favorite.moviePoster}` %> " alt="" style="display: block; margin: 0 auto;">
-        <p><a  href="/movies/info/<//%= favorite.movieId %> ">more...</a></p>
-        <form action="/favorites?_method=DELETE" method="POST">
-        <input type="hidden" name="id" value=" <//%= favorite.id %>  ">
-        <button type="submit">Delete</button>
-    </form>
-    </div> -->
+  
         
