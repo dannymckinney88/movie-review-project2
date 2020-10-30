@@ -20,8 +20,8 @@ The user will first be brought to the home page where they will see some movies 
 - A signed user will get the same home page with a welcome back message 
 
 - A signed in user when on the info page of a movie will have two options 
-- They can add a movie to a their favorites list 
-- They can write a review about any movie the like 
+- A signed in user can add a movie to a their favorites list 
+- A signed in user can write a review about any movie they like 
 
 
 ## Technologies used 
